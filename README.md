@@ -6,6 +6,7 @@
 ## Overview
 This project is a decentralized application (DApp) built with **React.js** and **Web3.js** that allows users to donate **Ethereum (ETH)** to a specified charity wallet address using **MetaMask**.
 
+
 ## Features
 - Connect to **MetaMask**
 - Display connected wallet address
