@@ -47,16 +47,15 @@ const Charity = () => {
     };
 
     return (
-<div className="p-40 flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500 p-4">
-    <div className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-md text-center border border-gray-200">
+<div className="p-6  sm:p-40 flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500">
+    <div className=" mt-3 bg-white shadow-2xl rounded-2xl p-6 sm:p-8 w-full max-w-md text-center border border-gray-200">
         {/* Title */}
-        <h1 className="text-2xl font-extrabold text-gray-800 mb-4">✨ Charity Campaign ✨</h1>
+        <h1 className="text-xl sm:text-2xl font-extrabold text-gray-800 mb-4">✨ Charity Campaign ✨</h1>
         
         {/* Wallet Status */}
-        <p className="text-lg font-semibold text-gray-700 bg-gray-100 rounded-lg inline-block">
+        <p className="text-base sm:text-lg font-semibold text-gray-700 bg-gray-100 rounded-lg inline-block px-4 py-2">
             Wallet Status:
             {account ? (
-                 
                 <span className="text-green-600">✅ {account}</span>
             ) : (
                 <span className="text-red-500">❌ Not connected</span>
@@ -64,13 +63,13 @@ const Charity = () => {
         </p>
 
         {/* Error Message */}
-        {error && <p className="text-red-500 font-semibold mt-3">{error}</p>}
+        {error && <p className="text-red-500 font-semibold mt-3 text-sm sm:text-base">{error}</p>}
 
         {/* Connect to MetaMask Button */}
         {!account && (
             <button 
                 onClick={connectToMetaMask} 
-                className="bg-green-500 text-white font-semibold px-6 py-3 rounded-lg flex items-center justify-center hover:bg-green-600 transition duration-300 shadow-lg mt-6 w-full"
+                className="bg-green-500 text-white font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg flex items-center justify-center hover:bg-green-600 transition duration-300 shadow-lg mt-6 w-full"
             >
                 🔗 Connect to MetaMask
             </button>
@@ -79,9 +78,9 @@ const Charity = () => {
         {/* Donate Button */}
         <button 
             onClick={handleDonate} 
-            className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg flex items-center justify-center hover:bg-blue-700 transition duration-300 shadow-lg mt-4 w-full animate-pulse"
+            className="bg-blue-600 text-white font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg flex items-center justify-center hover:bg-blue-700 transition duration-300 shadow-lg mt-4 w-full animate-pulse"
         >
-            <FaEthereum className="mr-2 text-2xl" />
+            <FaEthereum className="mr-2 text-xl sm:text-2xl" />
             Donate 0.1 ETH
         </button>
     </div>
