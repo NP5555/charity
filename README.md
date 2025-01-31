@@ -1,6 +1,6 @@
 # Charity Donation DApp
 
-<img src="./profile">
+<img src="./public/Charity DApp.png">
 
 
 ## Overview
